@@ -28,7 +28,7 @@ function checkPassword() {
             var li = document.createElement("li");
             li.textContent = item;
             li.onclick = function() {
-                showGif(item);
+                showActivityMessage();
             };
             favoritesList.appendChild(li);
         });
@@ -43,23 +43,10 @@ function checkPassword() {
     }
 }
 
-// GIF'i gösterme fonksiyonu
-function showGif(favorite) {
-    var gifContainer = document.getElementById("gif-container");
-    var gifImage = document.createElement("img");
-
-    // Favoriye göre GIF URL'sini belirleyelim
-    var gifUrls = {
-        "Yüzmek": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3RhdTRsZzA5azZrd3I4dWRyZXFyOWhkMGo5cjN5NGozaGs5d3Z1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7DIF9HAz65YE8/giphy.gif", // Yüzme GIF
-        "Gezmek": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXFyMzFzZGUyZm5uZmF3dzV0bDg5bnVjZXhnaWVxZjU2MXd4Z3lpMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gkKdyFwoKktVBiJhkk/giphy.gif", // Gezmek GIF
-        "Tatil": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGppa2Y2cTFvOGExNWlobGR0d2lyaW5tY2l3MTFzY3Y0ZHljZW12YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5xtDarqlsEW6F7F14Fq/giphy.gif", // Tatil GIF
-        "Yaz Mevsimi": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjJxNmxpM21rdm90ZHQweWxhNW1qanc1NG4xZXA3Z205dG5sN3l2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/etn52ENYVnpxqMaXiT/giphy.gif" // Yaz Mevsimi GIF
-    };
-
-    gifImage.src = gifUrls[favorite] || "";
-    gifContainer.innerHTML = "";
-    gifContainer.appendChild(gifImage);
-    gifContainer.style.display = "block";
+// Aktivite mesajını gösterme fonksiyonu
+function showActivityMessage() {
+    var activityMessage = document.getElementById("activity-message");
+    activityMessage.textContent = "Çok güzel bir aktivite, Busee!";
 }
 
 // Geri butonu işlevi
