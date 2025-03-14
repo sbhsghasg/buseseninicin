@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Doğrulama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Şifre Giriş Ekranı -->
+    <div id="login-container">
+        <h1>Hoşgeldin!</h1>
+        <input type="password" id="password" placeholder="Şifrenizi Girin" autocomplete="off">
+        <button onclick="checkPassword()">Giriş Yap</button>
+        <p id="error-message"></p>
+    </div>
+
+    <!-- Sevdiği Şeyler Ekranı -->
+    <div id="favorites-container">
+        <h1>Sevdiği Şeyler</h1>
+        <ul id="favorites-list">
+            <!-- Favoriler buraya eklenecek -->
+        </ul>
+        <div id="gif-container">
+            <!-- GIF buraya gelecek -->
+        </div>
+        <button id="back-btn" onclick="goBack()">Geri Dön</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
